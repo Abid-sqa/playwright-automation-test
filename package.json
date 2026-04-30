@@ -1,0 +1,26 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:dev": "cross-env TEST_ENV=dev playwright test",
+    "test:dev:chrome": "cross-env TEST_ENV=dev BROWSER=chrome playwright test",
+    "test:dev:firefox": "cross-env TEST_ENV=dev BROWSER=firefox playwright test",
+    "test:dev:webkit": "cross-env TEST_ENV=dev BROWSER=webkit playwright test",
+    "test:dev:headed": "cross-env TEST_ENV=dev playwright test --headed",
+    "test:stage:cart:headed": "cross-env TEST_ENV=stage playwright test tests/test/test-cart.spec.ts --headed",
+    "test:prod": "cross-env TEST_ENV=prod playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.9.2",
+    "dotenv": "^16.3.1",
+    "cross-env": "^7.0.3",
+    "faker": "^6.6.6",
+    "moment": "^2.29.4"
+  }
+}
